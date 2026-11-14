@@ -17,6 +17,19 @@
   });
   requestAnimationFrame(() => setTimeout(() => $$(".split").forEach(el => el.classList.add("is-in")), 60));
 
+  /* ---------- keep each word of the hero name on one line, scaled to fit ---------- */
+  const name = $(".hero__name");
+  const fitName = () => {
+    name.style.fontSize = "";
+    const cssSize = parseFloat(getComputedStyle(name).fontSize);
+    const avail = name.clientWidth;
+    const widest = Math.max(...[...name.children].map(c => c.scrollWidth));
+    if (widest > avail) name.style.fontSize = `${Math.floor(cssSize * avail / widest * 0.97)}px`;
+  };
+  fitName();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitName);
+  window.addEventListener("resize", fitName);
+
   /* ---------- build work grid from works.js ---------- */
   const works = typeof WORKS !== "undefined" ? WORKS : [];
   const grid = $("#grid");
