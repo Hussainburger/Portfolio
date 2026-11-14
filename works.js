@@ -1,25 +1,26 @@
 /* =========================================================
    YOUR WORKS: edit this list to update the portfolio.
    ---------------------------------------------------------
-   title    : project name
-   client   : "for ..." line (leave "" to hide)
-   category : "Graphic Design" | "3D" | "Marketing"  (used by the filter buttons)
-   image    : path to your image, e.g. "images/my-poster.jpg"
-              leave "" to show a halftone placeholder
-   size     : "wide" | "tall" | ""  (how big the tile is in the grid)
-   color    : accent colour for the placeholder tile
-   desc     : short text shown when the tile is clicked
-   link     : optional URL (Behance, Instagram post, video...). "" to hide
+   title : project name
+   type  : small label on the right (e.g. "Brand Identity", "3D Render")
+   image : path to your image, e.g. "images/my-poster.jpg"
+           leave "" to show a placeholder
+   size  : "lg" | "md" | "sm"   (desktop grid is 12 columns:
+           lg = 8, md = 6, sm = 4. Make each row add up to 12:
+           lg+sm, md+md, sm+sm+sm)
+   color : placeholder colour (ignored once you add an image)
+   desc  : short text shown when the work is clicked
+   link  : optional URL (Behance, Instagram post, video...). "" to hide
    ========================================================= */
 
 const WORKS = [
-  { title: "Brand Identity",    client: "for Island Café",        category: "Graphic Design", image: "", size: "wide", color: "#ff3b1f", desc: "Logo, colour system and packaging for a local café.", link: "" },
-  { title: "Product Render",    client: "for Self Branding",      category: "3D",             image: "", size: "tall", color: "#3fd0ff", desc: "Photoreal product visualisation, modeled and lit in 3D.", link: "" },
-  { title: "Social Campaign",   client: "for Reef Resort",        category: "Marketing",      image: "", size: "",     color: "#ffd23f", desc: "Launch campaign across Instagram and TikTok.", link: "" },
-  { title: "Poster Series",     client: "for Malé Music Night",   category: "Graphic Design", image: "", size: "",     color: "#e9e4d8", desc: "Comic-inspired poster series for a live music event.", link: "" },
-  { title: "3D Illustration",   client: "for Hussainburger",      category: "3D",             image: "", size: "wide", color: "#b06cff", desc: "Personal 3D illustration exploring the Hussainburger character.", link: "" },
-  { title: "Logo Design",       client: "for Atoll Tech",         category: "Graphic Design", image: "", size: "",     color: "#3dffa2", desc: "Wordmark and icon for a tech startup.", link: "" },
-  { title: "Ad Creatives",      client: "for Local Brand",        category: "Marketing",      image: "", size: "", color: "#ff6fa8", desc: "Paid social ad set with A/B tested visuals.", link: "" },
-  { title: "Character Sculpt",  client: "for Self Branding",      category: "3D",             image: "", size: "",     color: "#ff8a1f", desc: "Digital sculpt, textured and rendered.", link: "" },
-  { title: "Packaging Design",  client: "for Coconut Co.",        category: "Graphic Design", image: "", size: "",     color: "#9fe3ff", desc: "Label and box design for a coconut product line.", link: "" }
+  { title: "Island Café",      type: "Brand Identity",  image: "", size: "lg", color: "#ff6b3d", desc: "Logo, colour system and packaging for a local café.", link: "" },
+  { title: "Atoll Study",      type: "3D Illustration", image: "", size: "sm", color: "#2f8cff", desc: "Personal 3D illustration.", link: "" },
+  { title: "Reef Resort",      type: "Social Campaign", image: "", size: "md", color: "#8b5cf6", desc: "Launch campaign across Instagram and TikTok.", link: "" },
+  { title: "Music Night",      type: "Poster Series",   image: "", size: "md", color: "#f5c46b", desc: "Poster series for a live music event.", link: "" },
+  { title: "Capsule 01",       type: "Product Render",  image: "", size: "sm", color: "#14b8a6", desc: "Product visualisation, modeled and lit in Blender.", link: "" },
+  { title: "Atoll Tech",       type: "Logo Design",     image: "", size: "sm", color: "#00e5ff", desc: "Wordmark and icon for a tech startup.", link: "" },
+  { title: "Local Brand",      type: "Ad Creatives",    image: "", size: "sm", color: "#f43f5e", desc: "Paid social ad set.", link: "" },
+  { title: "Sunset Loop",      type: "Motion / Video",  image: "", size: "md", color: "#f97316", desc: "Short edited piece in After Effects and Premiere Pro.", link: "" },
+  { title: "Hussainburger",    type: "Self Branding",   image: "", size: "md", color: "#e11d48", desc: "My own identity, still being written.", link: "" }
 ];
